@@ -11,8 +11,9 @@ def matrixmul(a:list[list[int|float]],
     for vecA in a:
         vecOut = []
         for vecB in np.array(b).T:
+            vecB = vecB.tolist()
             prod = 0
-            for i, j in zip (vecA, vecB):
+            for i, j in zip(vecA, vecB):
                 prod += i * j
 
             vecOut.append(prod)
